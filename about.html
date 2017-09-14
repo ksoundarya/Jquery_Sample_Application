@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Learn jQuery UI" />
+		<meta name="keywords" content="HTML,CSS,jQuery UI" />
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+		<link rel="stylesheet" href="styles/style.css" />
+		<!-- Below we are loading JQuery external script/library files like jquery core library script file, jquery UI file and so on..
+		you can also include more depending on extra script uses as per your requirement.
+		-->
+		<link rel="stylesheet" href="styles/jquery-ui.css" />
+		<script src="scripts/jquery.js"></script>
+		<script src="scripts/jquery-ui.js"></script>
+		
+		<!--adding juery tab widget function related code in script tag -->
+		 <script>
+		$(function() {
+		$( "#myFancyTabs" ).tabs(); //here 'myFancyTabs' denotes the name/ID of my tab that i can use anywhere in my page
+		});
+		</script>
+	</head>
+	<body>
+		<div class="headerWrapper">
+			<div class="header">
+				<div class="logo">Welcome to my sample <span class="jQueryOrange">jQuery Application</span></div>
+			</div>
+		</div>
+		<div class="menuWrapper">
+			<div class="menu">
+				<div class="menuItem">
+					<a href="index.html">Home</a>
+				</div>
+				<div class="menuItem selected">
+					<a href="about.html">About</a>
+				</div>
+				<div class="menuItem">
+					<a href="favorites.html">History</a>
+				</div>
+				<div class="menuItem last">
+					<a href="contact.html">Contact</a>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div class="contentWrapper">
+			<div class="content">
+				 <h1>All about Jquery </h1>			
+				<!--here i'm using 'myFancytabs' id that i have created above in script tag and this can contain any number of sub tabs -->				 
+				 <div id="myFancyTabs"> 
+					 <ul>
+						<li><a href="#tabs-description">JQuery Description</a></li> 
+						<li><a href="#tabs-author"> Author</a></li>
+						<li><a href="#tabs-section">JQuery Features</a></li>
+						<li><a href="#tabs-advantages"> JQuery Advantages</a></li>
+					 </ul>
+					<!--here i'm using 'tabs-description' id that i have created above for course description tab, same gonna apply for all below tabs -->				 
+					 <div id="tabs-description">
+						<div>
+							 JQuery UI is one of the most successful UI libraries available today.  JQuery UI is built with the JQuery 
+							 Framework, by JQuery, and is without a doubt the most popular JavaScript library in use today.  JQuery UI
+							 features multi-browser support which means peace of mind that someone using Internet Explorer, 
+							 Firefox, Safari, or Chrome isn't going to leave your website with a sad face.
+						 </div>
+					 </div>
+					 <div id="tabs-author">
+						<div>
+							You are learning to use jQuery UI Widgets which is developed by "John Resig".
+						</div>
+					 </div>
+					 <div id="tabs-section">
+						<div>
+							jQuery includes the following features!!!
+						</div>
+						 <div>
+							<ul>
+								<li>DOM element selections using the multi-browser open source selector engine Sizzle, a spin-off of the jQuery project</li>
+								<li>Ajax</li>
+								<li>Events</li>
+								<li>JSON Parsing</li>
+								<li>Utilities, such as feature detection</li>
+								<li>Tooltip, Menus, Datepicker, Button and Other Theme Elements</li>
+							</ul>
+						 </div>		
+					 </div>
+					 <div id="tabs-advantages">
+					 	<div>
+							<ul>
+								<li>its light weight when compared to other javascript frameworks.</li>
+								<li>it has a wide range of plugins available for various specific needs.</li>
+								<li>it is easier for a designer to learn jQuery as it uses familiar CSS syntax. jQuery is Javascript for Designers.</li>	
+							</ui>
+						</div>
+					 </div>
+				 </div>
+			</div>
+		</div>
+		<div class="footerWrapper">
+			<div class="footer">
+			&copy; Soundarya
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="keywords" content="HTML,CSS,jQuery UI, Bootstrap" />
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="styles/style.css" />
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		
+		<link rel="stylesheet" href="styles/jquery-ui.css" />
+		<script src="scripts/jquery.js"></script>
+		<script src="scripts/jquery-ui.js"></script>
+		<!--adding juery Datepicker, button widget functions related code in script tag -->	
+		<script>
+			$(function() {
+			$( document ).tooltip();
+			});
+		</script>
+		
+		<script>
+		$(function() {
+		$( "#datepicker" ).datepicker();
+		});
+		</script>
+		
+		<script>
+		$(function() {
+		$( ".button" )
+		.button()		
+		.click(function( event ) {
+		event.preventDefault();
+		});
+		});
+		</script>
+		
+		<script>
+		$(function() {
+		$( ".button-heart" )
+		.button(
+			{
+			icons: {
+			primary: "ui-icon-heart"
+			},
+			text: true
+			}
+		)
+		.click(function( event ) {
+		event.preventDefault();
+		});
+		});
+		</script>
+		
+		<script>
+			function myFunction() { //my submit button function declaration to display alert button
+				alert("You have submitted sucessfully!!!!! Thanks")
+			}
+		</script>
+		
+	</head>
+	<body>
+		<div class="headerWrapper">
+			<div class="header">
+				<div class="logo">Welcome to my sample <span class="jQueryOrange">jQuery Application</span></div>
+			</div>
+		</div>
+		<div class="menuWrapper">
+			<div class="menu">
+				<div class="menuItem">
+					<a href="index.html">Home</a>
+				</div>
+				<div class="menuItem">
+					<a href="about.html">About</a>
+				</div>
+				<div class="menuItem">
+					<a href="favorites.html">History</a>
+				</div>
+				<div class="menuItem last selected">
+					<a href="contact.html">Contact</a>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div class="contentWrapper">
+			<div class="container content">
+				<form name="myForm">
+					<h1 title="If you must.">Contact Me:</h1>
+					<div class="row form-group">
+					<div class="col-sm-8">
+						<div class="ui-state-highlight ui-corner-all">
+							<p><span class="ui-icon ui-icon-lightbulb myAlerts"></span>
+							<strong>Warning!</strong> Please specify what date you want me to get back to you by because I am very busy.</p>
+						</div>
+					</div>
+					</div>
+					<div class="row form-group">
+						<div class="col-sm-6">
+							<div class="fieldWrap">
+								Your first name: <input type="text" id="txtFirstName" name="txtFirstName" title="Doesn't need to be your real first name." required />
+							</div>
+						</div>
+					</div>
+					<div class="fieldWrap">
+						Your last name: <input type="text" id="txtLastName" name="txtLastName" required />
+					</div>
+					<div class="fieldWrap">
+						What do you want? 
+						<div>
+							<textarea cols="20" rows="5" id="txtDate" name="txtDescription" title="What you really, really, want."></textarea>
+						</div>
+					</div>
+					<div class="fieldWrap">
+						What day should I get back to you by? <input type="text" id="datepicker" name="txtDescription" required/> 
+					</div>
+					<div class="fieldWrap">
+						<input type="submit" id="btnSubmit" value="Submit!" onclick="myFunction()" />
+						<input type="reset" id="button-heart" value="Reset!" class="reset" />
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="footerWrapper">
+			<div class="footer">
+			&copy; Soundarya
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="keywords" content="HTML,CSS,jQuery UI" />
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+		<link rel="stylesheet" href="styles/style.css" />
+		<!-- Below we are loading JQuery external script/library files like jquery core library script file, jquery UI file and so on..
+		you can also include more depending on extra script uses as per your requirement.
+		-->
+		<link rel="stylesheet" href="styles/jquery-ui.css" />
+		<script src="scripts/jquery.js"></script>
+		<script src="scripts/jquery-ui.js"></script>
+		
+		<!--adding juery accordian widget function related code in script tag -->
+		 <script>
+			$(function() {
+			$( "#myFancyContent" ).accordion(); //here 'myFancyContent' denotes the name of my accordian that i can use anywhere in my page
+			});
+		</script>
+	</head>
+	<body>
+		<div class="headerWrapper">
+			<div class="header">
+				<div class="logo">Welcome to my sample <span class="jQueryOrange">jQuery Application</span></div>
+			</div>
+		</div>
+		<div class="menuWrapper">
+			<div class="menu">
+				<div class="menuItem selected">
+					<a href="index.html">Home</a>
+				</div>
+				<div class="menuItem">
+					<a href="about.html">About</a>
+				</div>
+				<div class="menuItem">
+					<a href="favorites.html">History</a>
+				</div>
+				<div class="menuItem last">
+					<a href="contact.html">Contact</a>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div class="contentWrapper">
+			<div class="content">
+			 <h1>Few essential jQuery Interview Questions**</h1>		
+				<!--here i'm using 'myFancyContent' accordian that i have created above in script tag -->
+				 <div id="myFancyContent" class="special"> 
+					 <h3>What’s the deal with the $ in jQuery? What is it and what does it mean?</h3>
+					 <div>
+						Since $ has no special meaning in JavaScript, it is free to be used in object naming. In jQuery, it is simply used as an alias for the jQuery object and jQuery() function.
+
+						However, jQuery has no monopoly on use of $, so you may encounter situations where you want to use it in conjunction with another JS library that also uses $, 
+						which would therefore result in a naming conflict.jQuery provides the jQuery.noConflict() method for just this reason. 
+						Calling this method makes it necessary to use the underlying name jQuery instead in subequent references to jQuery and its functions.
+					 </div>
+					 <h3>What is method chaining in jQuery? Provide an example?</h3>
+					 <div>
+						Method chaining is a feature of jQuery that allows several methods to be executed on a jQuery selection in sequence in a single code statement.  
+					 </div>
+					 <h3>What is the difference between jQuery.get() and jQuery.ajax()?</h3>
+					 <div>
+						jQuery.ajax() is the all-encompassing Ajax request method provided by jQuery. 
+						It allows for the creation of highly-customized Ajax requests, with options for how long to wait for a response, 
+						how to handle a failure, whether the request is blocking (synchronous) or non-blocking (asynchronous), 
+						what format to request for the response, and many more options.
+
+						jQuery.get() is a shortcut method that uses jQuery.ajax() under the hood,
+						to create an Ajax request that is typical for simple retrieval of information. Other pre-built Ajax requests are provided by jQuery,
+						such as jQuery.post(), jQuery.getScript(), and jQuery.getJSON().
+					 </div>
+					 <h3>Explain the .promise() method in jQuery, including how and why it would be used?</h3>
+					 <div>
+						The .promise() method returns a dynamically generated Promise that is resolved once all actions of a certain type bound to the collection, queued or not, have ended.
+
+						It takes two optional arguments:
+						<ol>
+							<li>type - By default, type is “fx”, which means that the returned Promise is resolved when all animations of the selected elements have completed.</li>
+							<li>target - If a target object is specified, .promise() will attach to it and then return this object rather than create a new one.</li>
+						</ol>
+					 </div>
+				</div>
+			</div>
+		</div>
+		<div class="footerWrapper">
+			<div class="footer">
+			&copy; Soundarya
+			</div>
+		</div>
+	</body>
+</html>
